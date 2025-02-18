@@ -21,7 +21,7 @@ module ActiveMerchant # :nodoc:
       self.display_name = 'Windcave (formerly PaymentExpress)'
 
       self.live_url = 'https://sec.paymentexpress.com/pxaccess/pxpay.aspx'
-      self.test_url = 'https://uat.paymentexpress.com/pxaccess/pxpay.aspx'
+      self.test_url = 'https://sec.paymentexpress.com/pxaccess/pxpay.aspx'
 
       APPROVED = '1'
 
