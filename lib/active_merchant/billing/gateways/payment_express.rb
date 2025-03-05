@@ -21,7 +21,7 @@ module ActiveMerchant # :nodoc:
       self.display_name = 'Windcave (formerly PaymentExpress)'
 
       self.live_url = 'https://sec.windcave.com/pxaccess/pxpay.aspx'
-      self.test_url = 'https://sec.windcave.com/pxaccess/pxpay.aspx'
+      self.test_url = 'https://uat.windcave.com/pxaccess/pxpay.aspx'
 
       APPROVED = '1'
 
@@ -52,7 +52,6 @@ module ActiveMerchant # :nodoc:
       # also set the instance method `#use_billing_id_for_token` to true, see the `#store`
       # method for an example of how to do this.
       def purchase(money, payment_source, options = {})
-        binding.pry
         request = build_purchase_or_authorization_request(money, payment_source, options)
         commit(:purchase, request)
       end
